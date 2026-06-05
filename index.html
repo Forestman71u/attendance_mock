@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Story Matters | Attendance & Engagement Mockup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">My Story Matters</p>
+      <h1>Attendance & Engagement Tracker</h1>
+      <p class="subtitle">Mockup prototype for facilitator course tracking</p>
+    </div>
+    <div class="header-actions">
+      <button id="seedDemoBtn" class="secondary">Load Demo Data</button>
+      <button id="clearDataBtn" class="danger">Clear Data</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Create Course</h2>
+        <p>Add a course, facilitator, sessions, and attendees.</p>
+      </div>
+
+      <form id="courseForm" class="form-grid">
+        <label>
+          Course Name
+          <input id="courseName" type="text" placeholder="Example: Story Workshop - Spring Cohort" required />
+        </label>
+
+        <label>
+          Facilitator Name
+          <input id="facilitatorName" type="text" placeholder="Example: Jane Smith" required />
+        </label>
+
+        <label>
+          Facilitator Email
+          <input id="facilitatorEmail" type="email" placeholder="Example: jane@example.org" />
+        </label>
+
+        <label>
+          Course Status
+          <select id="courseStatus">
+            <option>Active</option>
+            <option>Completed</option>
+            <option>Canceled</option>
+          </select>
+        </label>
+
+        <label class="full">
+          Schedule Dates
+          <textarea id="scheduleDates" placeholder="Enter one session date per line, e.g.&#10;2026-06-10&#10;2026-06-17&#10;2026-06-24" required></textarea>
+        </label>
+
+        <label class="full">
+          Attendees
+          <textarea id="attendees" placeholder="Enter one attendee per line, e.g.&#10;Maria Garcia&#10;James Wilson&#10;Ava Thompson" required></textarea>
+        </label>
+
+        <button type="submit" class="primary full">Create Course</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Courses</h2>
+        <p>Select a course and session to record attendance.</p>
+      </div>
+
+      <div id="courseList" class="course-list"></div>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-heading">
+        <h2>Attendance & Engagement Entry</h2>
+        <p>Track each attendee’s status and engagement level for the selected session.</p>
+      </div>
+
+      <div id="attendanceArea" class="empty-state">
+        Select or create a course to begin tracking attendance.
+      </div>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-heading">
+        <h2>Leadership Dashboard Mockup</h2>
+        <p>High-level view of completed and missing attendance records.</p>
+      </div>
+
+      <div id="dashboard" class="dashboard"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a static front-end mockup. Data is saved in your browser using localStorage.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
